@@ -19,13 +19,13 @@ This document outlines the step-by-step implementation plan for the StartUp Ecos
 - [ ] **2.5 Federated Identity:** Integrate MCP and A2A SDKs to allow Partner incubators and accelerators to access and authenticate.
 
 ## Phase 3: Core Interactions and Workflows
-- [ ] **3.1 Matchmaking & Discovery:** Build the search and filter UI backed by the Agentic framework to match Founders with Mentors/Investors based on stage and sector.
-- [ ] **3.2 Connection Request Workflow:** Implement the request, accept/decline, and scheduling logic.
-- [ ] **3.3 Activity Wall:** Create the social feed for posting Challenges and allowing engagement/replies.
+- [x] **3.1 Matchmaking & Discovery:** Build the search and filter UI backed by the Agentic framework to match Founders with Mentors/Investors based on stage and sector.
+- [x] **3.2 Connection Request Workflow:** Implement the request, accept/decline, and scheduling logic.
+- [x] **3.3 Activity Wall:** Create the social feed for posting Challenges and allowing engagement/replies.
 - [ ] **3.4 Dashboard UI:** Build the Bento Grid dashboard using the "OwlWise" design system (Insights, Ecosystem Pulse, Toolkit).
 
 ## Phase 4: Integrations
-- [ ] **4.1 Channel Service Messaging:** Implement Email, WhatsApp, Signal, and Bluesky notifications via the AiGen App channel service.
+- [x] **4.1 Channel Service Messaging:** Implement Email, WhatsApp, Signal, and Bluesky notifications via the AiGen App channel service (notification_agent).
 - [ ] **4.2 Native Video Conferencing:** Integrate external video tools via API/MCP and support transcription downloading.
 - [ ] **4.3 Payments & Subscriptions:** Set up payment gateways for "Pro" Founder subscriptions and Mentor session payments.
 

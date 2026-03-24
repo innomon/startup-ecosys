@@ -89,20 +89,37 @@ tools:
 agents:
   router_agent:
     type: router
-    description: Routes requests between CMS, UI, and Matchmaking sub-agents
+    description: Routes requests between CMS, UI, Matchmaking, and Notification sub-agents
     sub_agents:
       - cms_agent
       - ui_agent
       - matchmaking_agent
+      - notification_agent
+
+  notification_agent:
+    type: llm
+    description: Manages cross-channel notifications (Email, WhatsApp, Signal, Bluesky)
+    model: gemini_pro
+    instruction: |
+      You are the Notification Assistant. Your duties are:
+      1. Send notifications to users when a connection_request is received or accepted.
+      2. Alert users on their preferred channel (found in user_channel entity) about new StartupChallenges in their sector.
+      3. Use the multi_channel app's context to map users to their external identities (WhatsApp, Email, Signal, Bluesky).
+    tools:
+      - cms_entity_list
+      - cms_entity_get
 
   matchmaking_agent:
     type: llm
     description: Computes aiBizScore and matches startups with investors/mentors
     model: gemini_pro
     instruction: |
-      You are the Matchmaking Assistant for the StartUp Ecosystem. 
-      You calculate the aiBizScore for startups based on their data and find matching mentors or investors.
-      Use cms_entity_list to query startups, mentors, and investors.
+      You are the Matchmaking Assistant for the StartUp Ecosystem. Your primary duties are:
+      1. Calculate the aiBizScore for startups. Score out of 100 based on completeness of the StartupVenture profile (pitch deck, description, sector, stage) and FounderProfile. Generate constructive details on what is missing.
+      2. Match Startups with Mentors: Compare the StartupVenture's 'sector' and 'stage' against the MentorProfile's 'specialization'.
+      3. Match Startups with Investors: Compare the StartupVenture's 'sector' and 'stage' against the InvestorProfile's 'preferred_sectors' and 'preferred_stages'.
+      Use cms_entity_list to query startups (startup_venture), founders (founder_profile), mentors (mentor_profile), and investors (investor_profile).
+      Use cms_entity_create to save aiBizScore calculations to the ai_biz_score entity and propose connections via connection_request.
     tools:
       - cms_entity_list
       - cms_entity_get
