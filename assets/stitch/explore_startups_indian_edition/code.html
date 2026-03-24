@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ff9100",
+              "secondary": "#ffb97c",
+              "background": "#00042d",
+              "surface": "#000450",
+              "on-background": "#ffedea",
+              "on-surface": "#ffb6a3",
+              "on-surface-variant": "#d0c0bb",
+              "outline": "#4d3d3a",
+              "outline-variant": "#322624",
+              "surface-container": "#000670",
+              "surface-container-high": "#00088b",
+              "surface-container-highest": "#000ba7",
+              "tertiary": "#a4c6a2"
+            },
+            fontFamily: {
+              "headline": ["Epilogue", "sans-serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .jaipur-glow {
+            box-shadow: 0 0 30px rgba(255, 145, 0, 0.1), 0 0 60px rgba(0, 4, 80, 0.2);
+        }
+        .glass-card {
+            background: rgba(0, 4, 80, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 182, 163, 0.1);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #00042d;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopAppBar from COMPONENTS_8 -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#000450] border-b border-[#ffb6a3]/15 shadow-[0_20px_50px_rgba(0,4,80,0.3)]">
+<div class="flex items-center gap-2 text-[#ffb97c] font-['Epilogue'] font-black text-xl">
+<span class="material-symbols-outlined" data-icon="owl">owl</span>
+<span>StartupBoard</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#ff9100] font-['Epilogue'] font-bold text-lg hover:bg-[#ffb6a3]/10 transition-colors px-3 py-1 rounded-xl" href="#">Home</a>
+<a class="text-[#ffb6a3]/70 font-['Epilogue'] font-bold text-lg hover:bg-[#ffb6a3]/10 transition-colors px-3 py-1 rounded-xl" href="#">Explore</a>
+<a class="text-[#ffb6a3]/70 font-['Epilogue'] font-bold text-lg hover:bg-[#ffb6a3]/10 transition-colors px-3 py-1 rounded-xl" href="#">Dashboard</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#ffb97c] hover:bg-[#ffb6a3]/10 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto">
+<!-- Hero Search Section -->
+<section class="mb-16">
+<div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-surface to-background p-8 md:p-12 mb-12 border border-outline-variant/30 jaipur-glow">
+<div class="relative z-10 max-w-2xl">
+<h1 class="text-4xl md:text-6xl font-headline font-black tracking-tight text-on-background mb-6 leading-[1.1]">
+                    Discover India's Next <span class="text-primary italic">Unicorns</span>
+</h1>
+<p class="text-lg text-on-surface-variant mb-8 font-body max-w-lg leading-relaxed">
+                    Connecting visionary investors with Bharat's brightest innovators across Bengaluru, Hyderabad, and Pune.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 items-center glass-card p-2 rounded-2xl border border-white/5">
+<div class="flex items-center flex-1 w-full px-4 gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full py-3 font-body placeholder:text-on-surface/40" placeholder="Search startups, sectors, or cities..." type="text"/>
+</div>
+<button class="w-full md:w-auto bg-primary text-[#00042d] px-8 py-3 rounded-xl font-headline font-extrabold hover:shadow-[0_0_30px_rgba(255,145,0,0.4)] transition-all active:scale-95">
+                        Explore Now
+                    </button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-0 right-0 p-8 hidden lg:block opacity-20">
+<span class="material-symbols-outlined text-[15rem] text-secondary" data-icon="rocket_launch" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-4">
+<div class="flex items-center gap-2 px-5 py-2.5 bg-surface-container rounded-full border border-outline-variant text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="category">category</span>
+<span class="text-sm font-label font-semibold">Sector</span>
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+<div class="flex items-center gap-2 px-5 py-2.5 bg-surface-container rounded-full border border-outline-variant text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-sm font-label font-semibold">City</span>
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+<div class="flex items-center gap-2 px-5 py-2.5 bg-surface-container rounded-full border border-outline-variant text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="monetization_on">monetization_on</span>
+<span class="text-sm font-label font-semibold">Funding</span>
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+<div class="h-6 w-px bg-outline-variant/40 mx-2"></div>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary rounded-full border border-primary/20 font-label text-sm font-bold transition-all hover:bg-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                Active Filters (3)
+            </button>
+</div>
+</section>
+<!-- Startup Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: AgriTech (Bengaluru) -->
+<div class="group relative bg-surface-container rounded-[2.5rem] p-7 border border-outline-variant/20 hover:border-primary/40 transition-all duration-500 jaipur-glow flex flex-col h-full">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-[#001a40] flex items-center justify-center border border-primary/20 overflow-hidden shadow-inner">
+<img alt="Modern Indian startup logo with orange and navy color scheme" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDysdo4h1KPMBzXReK7TcyMApkiqLQglEVAV-9F0-Y5oy9QR4HpvWKSvJgFwVphgQxiCt4GPruT3l3rPFHVw-aT-v9rTv9kJMVZySzE-PoCcdclszg0I6RsFYAb2D_U5vc-xuN59RB00aAA_lutJiFWPNJUKGaYAhKA8Guxxt_9-SvkPihNlyZkoiVdKsnsEyq00uoZQc-YtNhh5AZBow5jeMpH83dMjEWfPXlOYjAiwZbGrTz0XUdQ1Q2N0vBwKzgXNcCVePGm6HjD"/>
+</div>
+<span class="px-4 py-1 bg-tertiary/20 text-tertiary text-[10px] font-black uppercase tracking-widest rounded-lg border border-tertiary/20">Series B</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-on-background mb-2 group-hover:text-primary transition-colors">KisanConnect AI</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                Utilizing IoT and AI to provide precision irrigation schedules for small-scale farmers, increasing yield by 40%.
+            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">AgriTech</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">Sustainability</span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs font-label font-medium uppercase tracking-wider">Bengaluru, KA</span>
+</div>
+<button class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined font-bold" data-icon="north_east">north_east</span>
+</button>
+</div>
+</div>
+<!-- Card 2: FinTech Bharat (Hyderabad) -->
+<div class="group relative bg-surface-container rounded-[2.5rem] p-7 border border-outline-variant/20 hover:border-primary/40 transition-all duration-500 jaipur-glow flex flex-col h-full">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-[#001a40] flex items-center justify-center border border-secondary/20 overflow-hidden shadow-inner">
+<img alt="Indian founder in a modern office setting, smiling confidently" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKD96ShuulVh3swQ11TWMdeN5ADCxOsWqYTrg-MEh6I9si8IWEB7HUwnC2sFlJg2eN2dvqDuHI1I7Gj0mav8OrEDrKq63k5VYvedIKfR9IX40Nn95jp-2gdKTLIy8nZ6jGMtOGIUr9PUNjJ_Yj8GwWOrVEaFUUqk8fN1pxbQGUQLEEMtkQjMhGToh0F0rPlyf5KcM4ehvf8N4aBERbgEDS_U9U7ahPvrdQdpegUVIP1ovkpuZBynqih4EAIYVS7hDjhxES5NFeda-b"/>
+</div>
+<span class="px-4 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-black uppercase tracking-widest rounded-lg border border-outline-variant/30">Pre-Series A</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-on-background mb-2 group-hover:text-primary transition-colors">BharatPay Pro</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                A localized credit-first platform empowering Tier 2 and Tier 3 merchants with instant digital working capital.
+            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">FinTech Bharat</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">UPI</span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs font-label font-medium uppercase tracking-wider">Hyderabad, TS</span>
+</div>
+<button class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined font-bold" data-icon="north_east">north_east</span>
+</button>
+</div>
+</div>
+<!-- Card 3: EdTech (Pune) -->
+<div class="group relative bg-surface-container rounded-[2.5rem] p-7 border border-outline-variant/20 hover:border-primary/40 transition-all duration-500 jaipur-glow flex flex-col h-full">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-[#001a40] flex items-center justify-center border border-primary/20 overflow-hidden shadow-inner">
+<img alt="Sleek technology logo with saffron and indigo gradients" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdzpjjO4Y8czjcc4YjJ73_c2GcIBjCYnpAJX7n21kWZIIpffW0LhYQWmNbRPBtDCzLM7ATi4ECxOpQx8uX3kuIRKFxpqTs413j7zir0gmmJq6eGJ7Fhl25H-aasD2gnNzpgFVodbhnff_o5m-_ZoKDk2UoQIEeN_7-ITwgCgB4VWlnx6ghd3bpakfv8oZGuuD-6yfV7yV2i2JLxL3xXDvDE3gRZNbDK5uHFqMYH2QwPrvNjRNI_w_g4BHiXQGp2iBiSVrn39MfgOF8"/>
+</div>
+<span class="px-4 py-1 bg-primary/20 text-primary text-[10px] font-black uppercase tracking-widest rounded-lg border border-primary/20">Seed</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-on-background mb-2 group-hover:text-primary transition-colors">Vidyarthi VR</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                Immersive virtual reality labs for rural schools, making STEM education accessible and engaging for all.
+            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">EdTech</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">AR/VR</span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs font-label font-medium uppercase tracking-wider">Pune, MH</span>
+</div>
+<button class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined font-bold" data-icon="north_east">north_east</span>
+</button>
+</div>
+</div>
+<!-- Featured Section: Asymmetric -->
+<div class="group relative md:col-span-2 bg-gradient-to-r from-surface-container to-surface-container-highest rounded-[2.5rem] p-8 md:p-10 border border-outline-variant/30 hover:border-primary/40 transition-all duration-500 jaipur-glow overflow-hidden">
+<div class="flex flex-col md:flex-row gap-8 relative z-10 h-full">
+<div class="md:w-3/5 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-20 h-20 rounded-2xl bg-primary/10 p-1 border border-primary/20">
+<img alt="AI startup logo with Indian cultural motifs" class="w-full h-full object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt0iQQJ9ghLCWuGbAQjYO1WksK4RP1m37YT9wIOJdaaoM-g_zYWeBVKwbgLj1vhkb3dcbh93W2CxmnxKZXmnJJsrU0zFxNr_koucyFoD5LD1cxGZvxYixfHt0dr1OTeUnKio6xP0kGu4hk-HmRlx1ZaovgbmsgQEHgOOt6oFPkU9H3lV66E43lPeTN7hDUutCg3sDT7PxjoT-vZknbOs4LlxS4TjC1GgiJj1AymA2W74Bgun6noHmO6i9UdWRdLrZYJm54O4MxUtSo"/>
+</div>
+<div>
+<span class="px-3 py-1 bg-primary text-background text-[10px] font-black uppercase tracking-widest rounded-lg mb-2 inline-block">Featured Unicorn</span>
+<h3 class="text-3xl md:text-4xl font-headline font-black text-on-background">IndiBot Dynamics</h3>
+</div>
+</div>
+<p class="text-on-surface-variant font-body mb-8 leading-relaxed text-lg">
+                        Bengaluru's pioneer in humanoid robotics for industrial automation, combining indigenous engineering with global AI standards.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background px-8 py-3 rounded-xl font-headline font-black text-sm hover:opacity-90 transition-opacity">View Portfolio</button>
+<button class="text-primary border border-primary/40 px-8 py-3 rounded-xl font-headline font-black text-sm hover:bg-primary/10 transition-colors">Meet the Team</button>
+</div>
+</div>
+<div class="md:w-2/5 h-64 md:h-auto rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+<img alt="Advanced robotics lab in Bengaluru with young Indian engineers" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtlifx0S68zhmd37fSpLETf0UzHVR1y7HgSZZ4pFWWFX6SnrGAAz8tYKw-h6qBLTkT2bkRuK-hX2MXubjCpxGocJLr0CIEucDWwOwhtKKNh9CjmYgmmnzu_S6A0nWbLxPtDUB3DMbsI4HRjcDoZ6BRSvZi7P5QIz-QhTT3oS0XotXK7C5HmtlEW-StX0ir_vIXayTF865DAkiIkETDfkAw9hEJC40QEhRCFDS5DvfncdV_7fz9xbB5aOJye50tTFdHYPFTRZHP_t4V"/>
+</div>
+</div>
+<!-- Pulse Decoration -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-[60px]"></div>
+</div>
+<!-- Card 5: HealthTech (Pune) -->
+<div class="group relative bg-surface-container rounded-[2.5rem] p-7 border border-outline-variant/20 hover:border-primary/40 transition-all duration-500 jaipur-glow flex flex-col h-full">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 rounded-2xl bg-[#001a40] flex items-center justify-center border border-primary/20 overflow-hidden shadow-inner">
+<img alt="Indian HealthTech logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNY9oPdonQVveXNWrWgmRulvqQitliTL-kKIuRcQckE3oooCzJjAqMu1DtgZ6n1Kquk9uq-dRKhFOl9mWAMQaRTPveYT0afUIYncH2rPWn7xSZII2LuQ36q9nzIJfUE01tAzVLVmmtjgy0j2WiA8JRkgsZi0uPoGOxkb1a9wHHQLMFrt9uQ3k9XROEG-gORcJu3NtCn0xFbcUVDzpzooMmZPXToPLSHttH0vDPpfYPnvG7ZOAcSAA5cIQhVOQrZuaUlRdi9SgValOk"/>
+</div>
+<span class="px-4 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-black uppercase tracking-widest rounded-lg border border-outline-variant/30">Series C</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-on-background mb-2 group-hover:text-primary transition-colors">Arogya Stream</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                Pune-based telehealth platform bringing specialist doctors to rural primary healthcare centers via low-bandwidth video.
+            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">HealthTech</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[11px] font-label font-bold text-on-surface-variant">Rural Impact</span>
+</div>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs font-label font-medium uppercase tracking-wider">Pune, MH</span>
+</div>
+<button class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined font-bold" data-icon="north_east">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-20 flex flex-col items-center">
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent mb-8"></div>
+<button class="group flex items-center gap-4 text-on-surface font-headline font-black text-xl hover:text-primary transition-colors">
+            Discover More Startups
+            <span class="material-symbols-outlined group-hover:translate-y-2 transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar from COMPONENTS_8 -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#000450]/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.4)] md:hidden">
+<a class="flex flex-col items-center justify-center text-[#ffb6a3]/60 px-4 py-2 hover:text-[#ffb97c] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#ff9100] bg-[#ff9100]/10 rounded-2xl px-4 py-2 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] uppercase tracking-widest">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#ffb6a3]/60 px-4 py-2 hover:text-[#ffb97c] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#ffb6a3]/60 px-4 py-2 hover:text-[#ffb97c] transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] uppercase tracking-widest">Connect</span>
+</a>
+</nav>
+</body></html>

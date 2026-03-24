@@ -1,0 +1,41 @@
+{
+  "Name": "AiBizScore",
+  "DisplayName": "AiBizScore",
+  "TableName": "ai_biz_score",
+  "LabelAttributeName": "score",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "venture_id",
+      "Header": "Venture",
+      "DataType": "Lookup",
+      "Options": "StartupVenture",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "score",
+      "Header": "Score",
+      "DataType": "Float",
+      "DisplayType": "Number",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "details",
+      "Header": "Details",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "calculated_at",
+      "Header": "Calculated At",
+      "DataType": "Datetime",
+      "DisplayType": "Date",
+      "InList": true,
+      "InDetail": true
+    }
+  ]
+}

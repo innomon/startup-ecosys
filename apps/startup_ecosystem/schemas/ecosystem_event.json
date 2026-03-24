@@ -1,0 +1,57 @@
+{
+  "Name": "EcosystemEvent",
+  "DisplayName": "Ecosystem Event",
+  "TableName": "ecosystem_event",
+  "LabelAttributeName": "title",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "title",
+      "Header": "Title",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "description",
+      "Header": "Description",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "event_date",
+      "Header": "Event Date",
+      "DataType": "Datetime",
+      "DisplayType": "Date",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "location",
+      "Header": "Location",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "is_virtual",
+      "Header": "Is Virtual",
+      "DataType": "Boolean",
+      "DisplayType": "Checkbox",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "link",
+      "Header": "Link",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    }
+  ]
+}

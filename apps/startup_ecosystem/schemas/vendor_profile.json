@@ -1,0 +1,49 @@
+{
+  "Name": "VendorProfile",
+  "DisplayName": "Vendor Profile",
+  "TableName": "vendor_profile",
+  "LabelAttributeName": "organization_name",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "user_id",
+      "Header": "User ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "organization_name",
+      "Header": "Organization Name",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "is_verified",
+      "Header": "Is Verified",
+      "DataType": "Boolean",
+      "DisplayType": "Checkbox",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "description",
+      "Header": "Description",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "website",
+      "Header": "Website",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    }
+  ]
+}

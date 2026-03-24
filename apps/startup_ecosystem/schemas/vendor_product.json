@@ -1,0 +1,49 @@
+{
+  "Name": "VendorProduct",
+  "DisplayName": "Vendor Product",
+  "TableName": "vendor_product",
+  "LabelAttributeName": "name",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "name",
+      "Header": "Product Name",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "description",
+      "Header": "Description",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "vendor_id",
+      "Header": "Vendor ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "price",
+      "Header": "Price",
+      "DataType": "Float",
+      "DisplayType": "Number",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "category",
+      "Header": "Category",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    }
+  ]
+}

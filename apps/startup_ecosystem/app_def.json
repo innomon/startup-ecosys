@@ -1,0 +1,60 @@
+{
+  "name": "startup_ecosystem",
+  "display_name": "StartUp Ecosystem",
+  "description": "A multi-sided networking and marketplace platform connecting Founders, Mentors, Incubators, Accelerators, and Investors.",
+  "context": "The StartUp Ecosystem app facilitates business connections, fundraising, mentorship, and access to startup resources within a disaggregated, open ecosystem.",
+  "roles": [
+    "Founder",
+    "Mentor",
+    "Investor",
+    "Vendor",
+    "Admin",
+    "Partners"
+  ],
+  "entities": {
+    "startup_venture": {
+      "description": "Details about a startup venture, including stage, sector, and metrics.",
+      "context_file": "docs/startup_venture.md"
+    },
+    "startup_challenge": {
+      "description": "A post by a Founder seeking advice or solutions.",
+      "context_file": "docs/startup_challenge.md"
+    },
+    "ecosystem_meeting": {
+      "description": "A scheduled interaction between users.",
+      "context_file": "docs/ecosystem_meeting.md"
+    },
+    "ecosystem_event": {
+      "description": "Webinars, pitch days, or workshops.",
+      "context_file": "docs/ecosystem_event.md"
+    },
+    "vendor_product": {
+      "description": "Digital assets like templates, research reports, or partner vendor tools.",
+      "context_file": "docs/vendor_product.md"
+    },
+    "ai_biz_score": {
+      "description": "AI-generated open metric/assessment tool for startup readiness.",
+      "context_file": "docs/ai_biz_score.md"
+    },
+    "founder_profile": {
+      "description": "Profile details for a Founder.",
+      "context_file": "docs/founder_profile.md"
+    },
+    "mentor_profile": {
+      "description": "Profile details for a Mentor.",
+      "context_file": "docs/mentor_profile.md"
+    },
+    "investor_profile": {
+      "description": "Profile details for an Investor.",
+      "context_file": "docs/investor_profile.md"
+    },
+    "vendor_profile": {
+      "description": "Profile details for a Vendor.",
+      "context_file": "docs/vendor_profile.md"
+    },
+    "connection_request": {
+      "description": "Request for a business connection between users.",
+      "context_file": "docs/connection_request.md"
+    }
+  }
+}

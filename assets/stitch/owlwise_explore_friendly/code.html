@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#450900",
+              "inverse-on-surface": "#505466",
+              "surface-container-low": "#0d1323",
+              "background": "#090e1c",
+              "on-secondary": "#574300",
+              "tertiary-fixed-dim": "#929bfa",
+              "on-tertiary-fixed": "#00055d",
+              "surface-container-highest": "#1e253b",
+              "error-container": "#b92902",
+              "primary": "#fe9832",
+              "primary-fixed": "#fe9832",
+              "inverse-primary": "#904e00",
+              "secondary-dim": "#ebbb00",
+              "secondary-fixed": "#ffcb09",
+              "primary-dim": "#ed8b24",
+              "surface-container-lowest": "#000000",
+              "surface-dim": "#090e1c",
+              "on-primary-fixed-variant": "#592e00",
+              "on-surface": "#e1e4fa",
+              "outline-variant": "#434759",
+              "on-tertiary": "#1b247f",
+              "primary-fixed-dim": "#ed8b24",
+              "on-error-container": "#ffd2c8",
+              "tertiary-fixed": "#a2aaff",
+              "surface-bright": "#242b43",
+              "surface-container": "#13192b",
+              "surface-container-high": "#181f33",
+              "on-secondary-container": "#fff7ea",
+              "surface-tint": "#fe9832",
+              "on-tertiary-fixed-variant": "#252e88",
+              "error-dim": "#d53d18",
+              "secondary": "#fcc800",
+              "outline": "#707588",
+              "on-primary": "#4d2700",
+              "inverse-surface": "#faf8ff",
+              "surface-variant": "#1e253b",
+              "on-secondary-fixed": "#423200",
+              "primary-container": "#ea8822",
+              "secondary-fixed-dim": "#efbe00",
+              "tertiary-container": "#929bfa",
+              "on-secondary-fixed-variant": "#644e00",
+              "on-tertiary-container": "#0b1574",
+              "on-primary-fixed": "#291200",
+              "on-background": "#e1e4fa",
+              "tertiary-dim": "#8d96f4",
+              "on-surface-variant": "#a6aabf",
+              "on-primary-container": "#391b00",
+              "surface": "#090e1c",
+              "tertiary": "#a2aaff",
+              "error": "#ff7351",
+              "secondary-container": "#745b00"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { backdrop-filter: blur(24px); }
+        .dark body { background-color: #090e1c; color: #e1e4fa; }
+        body:not(.dark) { background-color: #f8fafc; color: #0f172a; }
+        body:not(.dark) header { background-color: rgba(255, 255, 255, 0.7); }
+        body:not(.dark) .bg-surface-container { background-color: #ffffff; }
+        body:not(.dark) .bg-surface-container-low { background-color: #f1f5f9; }
+        body:not(.dark) .bg-surface-container-high { background-color: #ffffff; border: 1px solid #e2e8f0; }
+        body:not(.dark) .text-on-surface-variant { color: #64748b; }
+        body:not(.dark) .bg-surface-container-highest { background-color: #e2e8f0; }
+        body:not(.dark) nav { background-color: rgba(255, 255, 255, 0.8); }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#090e1c]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-colors duration-300">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<img alt="OwlWise Mascot" class="w-10 h-10 rounded-full object-cover border-2 border-[#fe9832]" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+<h1 class="font-['Plus_Jakarta_Sans'] font-black text-2xl text-[#fe9832] tracking-tighter">OwlWise</h1>
+</div>
+<div class="flex items-center gap-2">
+<!-- Theme Toggle -->
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors active:scale-95 duration-200" onclick="document.documentElement.classList.toggle('dark')" title="Toggle Theme">
+<span class="material-symbols-outlined text-[#fe9832] dark:hidden" data-icon="dark_mode">dark_mode</span>
+<span class="material-symbols-outlined text-[#fe9832] hidden dark:block" data-icon="light_mode">light_mode</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#fe9832]/10 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#a2aaff]" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a smiling young professional man in a tech office setting with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkobYGB2TR2H2HrCY2jIgiltcy9Gb_MOTwz5MpG1LAdChhZK1nS_BZKO9M9YICBZm6CfjlVt0yT6_HUn1hp0ynV3uG8B2GNuaImoIYoGk0R6dEYqJ5XizFwA8gh4c0JKCHmZsbHUXmUGff1fYpBKgJXqGEUd0p85fN5L_8Niqz9UmFBJErl61ybmp83wNInSVbE8PCw_FnptkjbhI6pkQefZet12O-VGkNiI1ItS5ACN3iZadixBsY5QZ8_qy6fHirHP_QiLMlK6kz"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto space-y-8">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-8 md:p-12 min-h-[400px] flex flex-col justify-center">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block py-1 px-4 bg-primary/20 text-primary rounded-full text-xs font-bold tracking-widest uppercase mb-4">Trending Now</span>
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-on-surface leading-tight mb-6">
+                Discover Bharat's <span class="text-primary italic">Next Unicorns</span>.
+            </h2>
+<!-- Search & Filter Bar -->
+<div class="flex flex-col md:flex-row gap-4 w-full">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest rounded-full border-none focus:ring-2 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Search startups, founders, or sectors..." type="text"/>
+</div>
+<button class="px-8 py-4 bg-primary text-on-primary font-bold rounded-full flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+                    Filters
+                </button>
+</div>
+</div>
+</section>
+<!-- Featured Startup Section -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-headline font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                Featured Startup
+            </h3>
+</div>
+<div class="group relative bg-surface-container-high rounded-lg overflow-hidden flex flex-col md:flex-row shadow-xl">
+<div class="md:w-3/5 h-[300px] md:h-auto overflow-hidden">
+<img alt="IndiBot Dynamics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="futuristic industrial robot arm working in a high-tech laboratory with glowing orange lights and deep indigo shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8NJeldhD8I2TFanuIyf_wne90PTUIF8GK-Cp6wA4QeNmFie9DEhF9D9Rvpk1Kb2gRQZUIHa9EXs-B3ut7OMFS3QjhPJFVz4WPYf0QPHsLHvivdwxVuDbeCRtIS-k9dvOgRahMCMaZpswkAp1TKZ0JjQct6_UUCjd-vQZx6IRfHWE3prDNYmtRe75CqeZ865YZNTHzvLvtCEE96NxzD09fgm3VDkTwoO9qg9ssDszakpLYuCAfpuL1VDk1ND9ulnZORFPlLqlwbGix"/>
+</div>
+<div class="md:w-2/5 p-8 flex flex-col justify-center space-y-4">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase rounded-full tracking-wider">DeepTech</span>
+<span class="px-3 py-1 bg-tertiary/20 text-tertiary text-[10px] font-bold uppercase rounded-full tracking-wider">Series A</span>
+</div>
+<h4 class="text-3xl font-headline font-bold text-on-surface">IndiBot Dynamics</h4>
+<p class="text-on-surface-variant leading-relaxed">Revolutionizing Indian manufacturing with affordable, AI-powered collaborative robots designed for SMEs.</p>
+<div class="pt-4 flex items-center justify-between border-t border-outline-variant/20">
+<div class="flex -space-x-2">
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-surface-container-high" data-alt="close-up of a diverse female entrepreneur in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRjQDawggmTpMlw_VZD32H7Y0BzIj-zoHTXw_7MZQkIzoZDhoqEsIj2eg2HARjDQPH1G7_t4F3i9zuEAzAvL9M8tB0uX9Ndf66QtUH3tJza1ExSM6gRAr9VQqV8Ig_KUI2ZmJncVVpQ5fYgPVQFplDycdWNiK3t4fXog7NoWNXtbl3QYJp7xh_O6cWkJ5jyM3ok7pnhDdNMxnii8l35YkygEbJsSm2Ew2W0x86sYemkTlHaJS8TGBnWaAFFUiIvdHmCgjw-p0qJL6r"/>
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-surface-container-high" data-alt="close-up of a young male software engineer with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByoilAbFmw3CFuNuVovpwyzrUtKaeG9g1fuMpC2GB0ouF3j3tT6ihv4_fB4njJnhCd9vXf2P1pIOn7XbPefgahQj3UXGR1KKpeq7eQV9gDg1A98ZZk5FKZQNpc31KNM1sNgp3zv4eeYUksLGGAfGzcTiCZCP4wxVamyUABRP5nbWXdkfx1db9Xnk8vwdLrsVymafvfz0ROEqFA0qvgzzPSdjeCXfEsVDVjpChzJ1knN28Tvq8WCV5AS13-v37J7BEVz3eUWSu-97py"/>
+</div>
+<button class="px-6 py-2 bg-on-surface text-surface rounded-full font-bold text-sm hover:bg-primary transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- KisanConnect AI -->
+<div class="bg-surface-container rounded-lg p-6 hover:translate-y-[-8px] transition-all duration-300 border border-outline-variant/5 flex flex-col gap-4">
+<div class="h-48 rounded-md overflow-hidden bg-surface-container-lowest">
+<img alt="KisanConnect AI" class="w-full h-full object-cover" data-alt="vibrant green agricultural field at dawn with a farmer using a tablet to monitor crop health with digital overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ3SqpMwzqol2DkPhAefZebz7YC5cezWNvB49T91TNiBllBp1oNAEIQBMswwV0jdofqgGHJn9j_tunvudixHtLXaCsJiJB1t1rKi2Ycika3oAm2qdt-E4XK3Sm4y7n5liPc2RWVnP8B_gSGfWSc4aXe-JoLN55cUeLHDZdewOGjQoutcICCmXP52vy-uTsId0SCTOqP-9AUvAGecATdXtIJdIUy5dyf7XpP4RwH2EBK8aNX8UseqrmSeumq4SEuyBr8yPfF-Wxn4NT"/>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h5 class="text-xl font-headline font-bold text-on-surface">KisanConnect AI</h5>
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-extrabold uppercase rounded-full tracking-widest">AgriTech</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Precision farming platform using satellite data and IoT to optimize crop yields for rural Indian farmers.</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs text-on-surface-variant">Pune, India</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Funding</span>
+<span class="text-sm font-bold text-on-surface">$2.4M Raised</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BharatPay Pro -->
+<div class="bg-surface-container rounded-lg p-6 hover:translate-y-[-8px] transition-all duration-300 border border-outline-variant/5 flex flex-col gap-4">
+<div class="h-48 rounded-md overflow-hidden bg-surface-container-lowest">
+<img alt="BharatPay Pro" class="w-full h-full object-cover" data-alt="abstract digital payment interface glowing in electric blue and gold with floating currency symbols and circuit patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq0hVpPSrEyr49VZEW6nqR6wlhFwSKjSAxEixPEyKLwMwcBZ_ZHGGAueEko-DQraKxk2m574hQtFC9IInJkMyfbWP5aZYyKlXrf0vH8vgFQSsRGcE0MofnC7eJHbgze3ZCiZiYbIxVvakuE2tg6sFYhvoohuDbIHXT_zVNg4becLOu8Md1ky-sKMBMTBS1ym8b2cWfHc6l5-WgNKJmDx1j54eU-A73cI79WuRjqdgjjG5CvEIydMd-tUCHbHukLPMTCxOSMEvuySyw"/>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h5 class="text-xl font-headline font-bold text-on-surface">BharatPay Pro</h5>
+<span class="px-3 py-1 bg-[#a2aaff]/10 text-[#a2aaff] text-[10px] font-extrabold uppercase rounded-full tracking-widest">FinTech</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Unified digital banking solutions for Tier-2 and Tier-3 city merchants with instant credit lines.</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs text-on-surface-variant">Bengaluru, India</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Funding</span>
+<span class="text-sm font-bold text-on-surface">$12M Series B</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Vidyarthi VR -->
+<div class="bg-surface-container rounded-lg p-6 hover:translate-y-[-8px] transition-all duration-300 border border-outline-variant/5 flex flex-col gap-4">
+<div class="h-48 rounded-md overflow-hidden bg-surface-container-lowest">
+<img alt="Vidyarthi VR" class="w-full h-full object-cover" data-alt="child wearing a futuristic VR headset in a classroom with educational holograms of the solar system floating in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRb0eZ9-Uro6ZF_x3yQ3BA290qe4TAd6KkFpMuwbhsWuFpVeolkH51dB9VjYS09ZqBjbd6R_0Ps1oViwct8y9fRssxN6-eRKiibbx0wfHe-YYdO5U1ftblm_3fduKnQ9m2GiDl3IDS8zkJ9c6vIPrhKq0vFxGapesQLfeT5uabczF4yNyJcUzdbxtbUPIJje4iEKmusDFROE6zC6foxCYf2hkqcnimaG2x5DG16BW3CbgDwu731SrmGb6GXgZxNyVPoHo8Lmlh0wU_"/>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h5 class="text-xl font-headline font-bold text-on-surface">Vidyarthi VR</h5>
+<span class="px-3 py-1 bg-secondary-container text-secondary text-[10px] font-extrabold uppercase rounded-full tracking-widest">EdTech</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Immersive VR classrooms for school students, bridging the gap between theory and practical experience.</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs text-on-surface-variant">Hyderabad, India</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Funding</span>
+<span class="text-sm font-bold text-on-surface">$800K Seed</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-xl p-10 flex flex-col md:flex-row items-center gap-8 border border-outline-variant/10">
+<div class="md:w-1/3 flex justify-center">
+<div class="w-48 h-48 bg-secondary/10 rounded-full flex items-center justify-center relative overflow-hidden">
+<img alt="OwlWise Mascot" class="w-32 h-32 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+<div class="absolute -top-4 -right-4 bg-primary text-on-primary p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 space-y-6 text-center md:text-left">
+<h3 class="text-3xl font-headline font-extrabold text-on-surface">Stay ahead with Weekly OwlWise Insights.</h3>
+<p class="text-on-surface-variant text-lg">Join 50,000+ investors and founders receiving curated startup breakdowns every Sunday night.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-grow bg-surface-container-highest border-none rounded-full px-6 py-4 text-on-surface focus:ring-2 focus:ring-primary" placeholder="your@email.com" type="email"/>
+<button class="px-10 py-4 bg-secondary text-on-secondary-fixed font-bold rounded-full hover:shadow-[0_0_20px_rgba(252,200,0,0.4)] transition-all">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[40px] z-50 bg-[#090e1c]/60 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.3)] transition-colors duration-300">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3">
+<button class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#fe9832] to-[#ea8822] text-[#090e1c] rounded-full px-5 py-2 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Network</span>
+</button>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#450900",
+            "inverse-on-surface": "#505466",
+            "surface-container-low": "#0d1323",
+            "background": "#090e1c",
+            "on-secondary": "#574300",
+            "tertiary-fixed-dim": "#929bfa",
+            "on-tertiary-fixed": "#00055d",
+            "surface-container-highest": "#1e253b",
+            "error-container": "#b92902",
+            "primary": "#fe9832",
+            "primary-fixed": "#fe9832",
+            "inverse-primary": "#904e00",
+            "secondary-dim": "#ebbb00",
+            "secondary-fixed": "#ffcb09",
+            "primary-dim": "#ed8b24",
+            "surface-container-lowest": "#000000",
+            "surface-dim": "#090e1c",
+            "on-primary-fixed-variant": "#592e00",
+            "on-surface": "#e1e4fa",
+            "outline-variant": "#434759",
+            "on-tertiary": "#1b247f",
+            "primary-fixed-dim": "#ed8b24",
+            "on-error-container": "#ffd2c8",
+            "tertiary-fixed": "#a2aaff",
+            "surface-bright": "#242b43",
+            "surface-container": "#13192b",
+            "surface-container-high": "#181f33",
+            "on-secondary-container": "#fff7ea",
+            "surface-tint": "#fe9832",
+            "on-tertiary-fixed-variant": "#252e88",
+            "error-dim": "#d53d18",
+            "secondary": "#fcc800",
+            "outline": "#707588",
+            "on-primary": "#4d2700",
+            "inverse-surface": "#faf8ff",
+            "surface-variant": "#1e253b",
+            "on-secondary-fixed": "#423200",
+            "primary-container": "#ea8822",
+            "secondary-fixed-dim": "#efbe00",
+            "tertiary-container": "#929bfa",
+            "on-secondary-fixed-variant": "#644e00",
+            "on-tertiary-container": "#0b1574",
+            "on-primary-fixed": "#291200",
+            "on-background": "#e1e4fa",
+            "tertiary-dim": "#8d96f4",
+            "on-surface-variant": "#a6aabf",
+            "on-primary-container": "#391b00",
+            "surface": "#090e1c",
+            "tertiary": "#a2aaff",
+            "error": "#ff7351",
+            "secondary-container": "#745b00"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    .dark body {
+      background-color: #090e1c;
+    }
+    html:not(.dark) body {
+      background-color: #f8fafc;
+    }
+    html:not(.dark) .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(24px);
+    }
+    .dark .glass-card {
+      background: rgba(30, 37, 59, 0.6);
+      backdrop-filter: blur(24px);
+    }
+    /* Theme Toggle Switch Styles */
+    .theme-toggle-container {
+      position: relative;
+      display: inline-block;
+      width: 52px;
+      height: 28px;
+    }
+    .theme-toggle-container input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .theme-toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #434759;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .theme-toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .theme-toggle-slider {
+      background-color: #fe9832;
+    }
+    input:checked + .theme-toggle-slider:before {
+      transform: translateX(24px);
+    }
+    .theme-toggle-icon {
+      position: absolute;
+      font-size: 14px;
+      top: 6px;
+      pointer-events: none;
+      transition: .4s;
+    }
+    .sun-icon { left: 7px; color: #fe9832; opacity: 0; }
+    .moon-icon { right: 7px; color: #a2aaff; }
+    input:checked ~ .sun-icon { opacity: 1; }
+    input:checked ~ .moon-icon { opacity: 0; }
+
+    /* Custom classes for light mode support */
+    html:not(.dark) .text-on-surface { color: #1e293b; }
+    html:not(.dark) .text-on-surface-variant { color: #64748b; }
+    html:not(.dark) .bg-surface-container-low { background-color: #ffffff; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+    html:not(.dark) .bg-surface-container { background-color: #f1f5f9; }
+    html:not(.dark) .bg-surface-container-high { background-color: #ffffff; }
+    html:not(.dark) .bg-surface-container-highest { background-color: #e2e8f0; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-surface pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#090e1c]/60 dark:bg-[#090e1c]/60 html:not(.dark):bg-white/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-colors duration-300">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 overflow-hidden rounded-full bg-white flex items-center justify-center">
+<img alt="OwlWise Logo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-2xl font-black text-[#fe9832] tracking-tighter">OwlWise</h1>
+</div>
+<div class="flex items-center gap-4">
+<!-- Light/Dark Mode Toggle -->
+<div class="flex items-center">
+<label class="theme-toggle-container">
+<input checked="" id="theme-toggle" onchange="document.documentElement.classList.toggle('dark')" type="checkbox"/>
+<span class="theme-toggle-slider"></span>
+<span class="material-symbols-outlined theme-toggle-icon sun-icon" style="font-size: 14px">light_mode</span>
+<span class="material-symbols-outlined theme-toggle-icon moon-icon" style="font-size: 14px">dark_mode</span>
+</label>
+</div>
+<button class="p-2 rounded-full hover:bg-[#fe9832]/10 transition-colors active:scale-95 duration-200 text-[#a2aaff]">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden shrink-0">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="professional headshot of a smiling young woman with dark hair and warm expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOhFuC5VcXRnV4nFwI3Hv8ahsAFcptdHV97TTquD2DQSa-Jgku21dCvTOh8qM3AMG4TOK35FC3ChAs7uD7PN33o2fXl6u0Q4ehIjLK1QGzN-NdPEbOMX4WREml-TA1gHj1wC7IVsHrcj1t9BhXEJjtHlDJrT5H8pIgcJJEBRa2aAlybNdC-x9GIwvRPbQmmGzpkU0-wsNwXitg4cHqIEX0PPPhn7H3hKgfooA7GEfuRYCVKJn6z-eEjh8DZVSbICIe14FWjC0sgXJr"/>
+</div>
+</div>
+</header>
+<main class="mt-24 px-6 max-w-7xl mx-auto space-y-8">
+<!-- Hero Greeting Section -->
+<section class="relative overflow-hidden rounded-xl p-8 bg-surface-container-low border border-outline-variant/10">
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="space-y-3">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center shadow-[0_10px_20px_rgba(252,200,0,0.3)] overflow-hidden border-2 border-white">
+<img alt="Cute Mascot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+</div>
+<div>
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Hoo-ray, Aditi Rao!</h2>
+<p class="text-on-surface-variant text-lg">Your ecosystem is thriving tonight. Ready to hatch something big?</p>
+</div>
+</div>
+</div>
+<div class="hidden lg:block absolute -right-4 -bottom-8 opacity-10 transform rotate-12">
+<img alt="Owl mascot float" class="w-64 h-64 grayscale opacity-50" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- OwlWise Insights Card -->
+<div class="md:col-span-8 glass-card rounded-lg p-8 relative overflow-hidden group border border-outline-variant/15">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="format_quote">format_quote</span>
+</div>
+<div class="flex flex-col h-full justify-between gap-8">
+<div class="space-y-4">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-secondary text-[10px] font-bold uppercase tracking-wider">OwlWise Insights</span>
+<blockquote class="text-2xl md:text-3xl font-headline font-bold leading-tight text-on-surface">
+              "The most effective way to do it, is to do it. The night is youngest when the vision is clearest."
+            </blockquote>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-on-primary" data-icon="bolt">bolt</span>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-secondary flex items-center justify-center overflow-hidden">
+<img alt="mascot tiny" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+</div>
+</div>
+<span class="text-on-surface-variant text-sm font-medium">124 others found this insightful today</span>
+</div>
+</div>
+</div>
+<!-- Ecosystem Pulse -->
+<div class="md:col-span-4 bg-surface-container rounded-lg p-6 space-y-6 border border-outline-variant/15">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-lg">Ecosystem Pulse</h3>
+<span class="material-symbols-outlined text-primary" data-icon="sensors">sensors</span>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-container-highest flex gap-4 items-start border border-outline-variant/10">
+<div class="w-10 h-10 shrink-0 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-bold">Ziva Fintech</p>
+<p class="text-xs text-on-surface-variant">Shortlisted for the $50k Innovation Grant!</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-highest flex gap-4 items-start border border-outline-variant/10">
+<div class="w-10 h-10 shrink-0 rounded-full bg-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="handshake">handshake</span>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-bold">New VC Match</p>
+<p class="text-xs text-on-surface-variant">Atlas Ventures viewed your roadmap.</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-full text-sm font-bold text-primary hover:bg-primary/10 transition-colors">
+            View All Activity
+          </button>
+</div>
+</div>
+<!-- Founder Toolkit -->
+<div class="md:col-span-12 space-y-6">
+<h3 class="font-headline font-bold text-2xl px-2">Founder Toolkit</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<button class="group p-6 bg-gradient-to-br from-primary to-primary-container rounded-lg text-on-primary flex flex-col gap-4 text-left transition-transform hover:-translate-y-1 active:scale-95">
+<div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-2xl" data-icon="add_business">add_business</span>
+</div>
+<div class="space-y-1">
+<span class="text-sm font-bold block">Register New Venture</span>
+<p class="text-xs opacity-80">Streamline your next big idea launch.</p>
+</div>
+</button>
+<button class="group p-6 bg-surface-container-high rounded-lg flex flex-col gap-4 text-left transition-transform hover:-translate-y-1 active:scale-95 border border-outline-variant/20 hover:border-secondary/50">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-secondary" data-icon="groups">groups</span>
+</div>
+<div class="space-y-1">
+<span class="text-sm font-bold block text-on-surface">Connect with VCs</span>
+<p class="text-xs text-on-surface-variant">Direct bridge to top-tier investors.</p>
+</div>
+</button>
+<button class="group p-6 bg-surface-container-high rounded-lg flex flex-col gap-4 text-left transition-transform hover:-translate-y-1 active:scale-95 border border-outline-variant/20 hover:border-tertiary/50">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-tertiary" data-icon="map">map</span>
+</div>
+<div class="space-y-1">
+<span class="text-sm font-bold block text-on-surface">Quarterly Roadmap</span>
+<p class="text-xs text-on-surface-variant">Visualise your growth trajectory.</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Recent Metrics Glass Grid -->
+<div class="md:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 bg-surface-container-low rounded-lg border border-outline-variant/10 text-center space-y-1">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Network Score</p>
+<p class="text-3xl font-black text-secondary">92</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-lg border border-outline-variant/10 text-center space-y-1">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">VC Interactions</p>
+<p class="text-3xl font-black text-primary">14</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-lg border border-outline-variant/10 text-center space-y-1">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Active Ventures</p>
+<p class="text-3xl font-black text-tertiary">03</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-lg border border-outline-variant/10 text-center space-y-1">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Grant Eligibility</p>
+<p class="text-3xl font-black text-on-surface">High</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#090e1c]/60 html:not(.dark):bg-white/80 backdrop-blur-xl rounded-t-[40px] shadow-[0_-10px_30px_rgba(0,0,0,0.3)] flex justify-around items-center px-4 pb-6 pt-3 transition-colors duration-300">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#fe9832] to-[#ea8822] text-[#090e1c] rounded-full px-5 py-2 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Network</span>
+</a>
+</nav>
+</body></html>

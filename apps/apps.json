@@ -1,0 +1,9 @@
+{
+  "enabled_apps": [
+    "rbac",
+    "erpnext_accounting",
+    "crm",
+    "multi_channel",
+    "startup_ecosystem"
+  ]
+}

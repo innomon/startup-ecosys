@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.background');
+    color: white; /* Assuming dark mode default text color */
+    font-family: theme('fontFamily.sans');
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: theme('colors.glass');
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+  }
+}

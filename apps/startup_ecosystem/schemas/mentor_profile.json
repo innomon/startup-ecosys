@@ -1,0 +1,65 @@
+{
+  "Name": "MentorProfile",
+  "DisplayName": "Mentor Profile",
+  "TableName": "mentor_profile",
+  "LabelAttributeName": "full_name",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "user_id",
+      "Header": "User ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "full_name",
+      "Header": "Full Name",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "specialization",
+      "Header": "Specialization",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "experience_years",
+      "Header": "Years of Experience",
+      "DataType": "Integer",
+      "DisplayType": "Number",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "linkedin_url",
+      "Header": "LinkedIn Profile",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "bio",
+      "Header": "Bio",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "availability",
+      "Header": "Availability",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    }
+  ]
+}

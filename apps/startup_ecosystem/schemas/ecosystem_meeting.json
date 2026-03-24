@@ -1,0 +1,57 @@
+{
+  "Name": "EcosystemMeeting",
+  "DisplayName": "Ecosystem Meeting",
+  "TableName": "ecosystem_meeting",
+  "LabelAttributeName": "title",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "title",
+      "Header": "Title",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "meeting_time",
+      "Header": "Meeting Time",
+      "DataType": "Datetime",
+      "DisplayType": "Date",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "host_id",
+      "Header": "Host ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "participant_id",
+      "Header": "Participant ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "video_link",
+      "Header": "Video Link",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "status",
+      "Header": "Status",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    }
+  ]
+}

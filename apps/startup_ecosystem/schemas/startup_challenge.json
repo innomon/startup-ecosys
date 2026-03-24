@@ -1,0 +1,49 @@
+{
+  "Name": "StartupChallenge",
+  "DisplayName": "Startup Challenge",
+  "TableName": "startup_challenge",
+  "LabelAttributeName": "title",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "title",
+      "Header": "Title",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "venture_id",
+      "Header": "Venture",
+      "DataType": "Lookup",
+      "Options": "StartupVenture",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "description",
+      "Header": "Description",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "status",
+      "Header": "Status",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "created_at",
+      "Header": "Created At",
+      "DataType": "Datetime",
+      "DisplayType": "Date",
+      "InList": true,
+      "InDetail": true
+    }
+  ]
+}

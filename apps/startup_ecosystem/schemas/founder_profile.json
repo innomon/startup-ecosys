@@ -1,0 +1,41 @@
+{
+  "Name": "FounderProfile",
+  "DisplayName": "Founder Profile",
+  "TableName": "founder_profile",
+  "LabelAttributeName": "full_name",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "user_id",
+      "Header": "User ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "full_name",
+      "Header": "Full Name",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "linkedin_url",
+      "Header": "LinkedIn Profile",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "bio",
+      "Header": "Bio",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    }
+  ]
+}

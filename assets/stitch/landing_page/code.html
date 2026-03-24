@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Startup Board | A Nocturnal Sanctuary for Founders</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#c5c6d1",
+              "surface-container": "#1f2020",
+              "primary-fixed-dim": "#b5c4ff",
+              "secondary-container": "#fb8300",
+              "on-primary-fixed": "#00164d",
+              "on-tertiary-container": "#a4c6a2",
+              "inverse-on-surface": "#303030",
+              "surface-container-highest": "#353535",
+              "inverse-primary": "#495c98",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-fixed-variant": "#304d32",
+              "on-tertiary": "#1a361d",
+              "inverse-surface": "#e4e2e1",
+              "error": "#ffb4ab",
+              "tertiary-container": "#365337",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#04210a",
+              "surface-bright": "#393939",
+              "on-primary-fixed-variant": "#30447e",
+              "primary": "#b5c4ff",
+              "outline-variant": "#454650",
+              "background": "#131313",
+              "secondary-fixed-dim": "#ffb783",
+              "on-primary-container": "#a8bafd",
+              "tertiary": "#aecfab",
+              "surface-container-low": "#1b1c1c",
+              "on-primary": "#172c66",
+              "on-secondary": "#4f2500",
+              "primary-container": "#364984",
+              "outline": "#8f909b",
+              "secondary-fixed": "#ffdcc5",
+              "primary-fixed": "#dbe1ff",
+              "on-background": "#e4e2e1",
+              "on-error": "#690005",
+              "on-secondary-fixed": "#301400",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed": "#c9ecc6",
+              "tertiary-fixed-dim": "#aecfab",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary": "#ffb783",
+              "surface-dim": "#131313",
+              "on-surface": "#e4e2e1",
+              "surface-tint": "#b5c4ff",
+              "error-container": "#93000a",
+              "surface-variant": "#353535",
+              "on-secondary-container": "#5c2c00",
+              "on-secondary-fixed-variant": "#703700"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(31, 32, 32, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .moonlight-glow {
+            box-shadow: 0 0 40px rgba(251, 131, 0, 0.15);
+        }
+        body {
+            background-color: #131313;
+            color: #e4e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(54,73,132,0.15)] flex items-center justify-between px-6 py-4 w-full">
+<div class="text-orange-200 dark:text-orange-300 font-extrabold flex items-center gap-2 font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg">
+<span class="material-symbols-outlined text-orange-200" data-icon="owl">owl</span>
+<span>The Startup Board</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-orange-200 font-['Plus_Jakarta_Sans'] font-bold text-sm tracking-wide" href="#">Home</a>
+<a class="text-slate-400 hover:bg-indigo-900/20 hover:text-orange-100 transition-colors px-3 py-1 rounded-lg text-sm font-['Plus_Jakarta_Sans'] font-bold tracking-wide" href="#">Explore</a>
+<a class="text-slate-400 hover:bg-indigo-900/20 hover:text-orange-100 transition-colors px-3 py-1 rounded-lg text-sm font-['Plus_Jakarta_Sans'] font-bold tracking-wide" href="#">Dashboard</a>
+<a class="text-slate-400 hover:bg-indigo-900/20 hover:text-orange-100 transition-colors px-3 py-1 rounded-lg text-sm font-['Plus_Jakarta_Sans'] font-bold tracking-wide" href="#">Profile</a>
+</nav>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-indigo-200" data-icon="menu">menu</span>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative px-6 md:px-12 lg:px-24 pt-12 md:pt-24 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 text-center lg:text-left z-10">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-tertiary-container text-on-tertiary-container text-sm font-semibold mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+                        A Sanctuary for Founders
+                    </div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-on-background leading-[1.1] mb-8">
+                        Wisdom that <br/> <span class="text-secondary-fixed-dim">Illuminates</span> Growth.
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-body leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
+                        The Startup Board is a quiet, focused ecosystem designed for modern entrepreneurs to share insights, seek council, and build with purpose.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+<button class="w-full sm:w-auto px-8 py-4 rounded-xl bg-secondary text-on-secondary font-headline font-bold text-lg moonlight-glow hover:scale-105 transition-transform active:scale-95">
+                            Join the Board
+                        </button>
+<button class="w-full sm:w-auto px-8 py-4 rounded-xl border border-outline-variant/30 font-headline font-bold text-lg hover:bg-surface-container-high transition-colors">
+                            Explore Insights
+                        </button>
+</div>
+</div>
+<div class="flex-1 relative w-full aspect-square max-w-md lg:max-w-lg">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/40 to-transparent rounded-full blur-3xl opacity-50"></div>
+<div class="relative z-10 w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border border-outline-variant/10">
+<img alt="Cozy owl mascot illustration in a moonlit forest" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="a stylized digital art of a wise owl with glowing amber eyes sitting on a branch at night under a giant moon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR2KCMIv7iKURV1ST-XSPR1SJS2GSg3gheieeK0aLjK3K1dmathDyzkdonDHs8hT1sdgDkBbDLKDH1dNvrcYdZoyG_ZmuJi8Q3F7gvs3KKALeX0VNbwoEN0rjyimxb6il_pY-c8hs4C5z3Nvu-VduJZxfQuEbSdThcbZQVW7UAOaY8Y3yIxSd00IEtIKe7aMylrhSPLuJQ38wHx46ghxb5JggM_uWviW0vK7z3hCUuYUIyG3aiKBVn991g1vqvyn-tl4MaRuJaCcVD"/>
+<div class="absolute bottom-6 left-6 right-6 glass-panel p-6 rounded-2xl border border-outline-variant/20">
+<p class="text-on-surface font-headline font-bold italic">"In the quiet of the night, the most brilliant ideas take flight."</p>
+<span class="text-secondary text-sm font-semibold">— The Night Owl</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Bento Grid -->
+<section class="px-6 md:px-12 lg:px-24 mt-32 max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-3xl md:text-5xl font-headline font-bold text-on-background tracking-tight">Ecosystem Benefits</h2>
+<div class="w-24 h-1 bg-secondary mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-[2rem] border border-outline-variant/10 flex flex-col justify-between hover:bg-surface-container transition-colors min-h-[400px]">
+<div>
+<div class="w-14 h-14 bg-primary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="hub">hub</span>
+</div>
+<h3 class="text-3xl font-headline font-bold text-on-background mb-4">Strategic Advisory</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">Connect with verified founders and veteran board members who provide silent, high-impact council on your most critical pivots.</p>
+</div>
+<div class="mt-8 flex -space-x-3 overflow-hidden">
+<img alt="User 1" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface" data-alt="portrait of a confident business man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS0OuTkabfKpX8c2QvfkVYVbKMNdZsCPnL6DHhjc5t-ddNKzj2VLxnm2LuDV3snWKbkGGlNo86f3RQaz6568m4XQSPIP_LWGy0bRC9Rj5Vp6IB7o4-Izsitr_2SbxzmaO9jm39bz06OBmWI461OiAXrinRTlPBqylBf3Ty1KXSVSrROSZn6JHfTrXJ6pLCYz1LNR44soLr38-aUKNs7eFSz_bwU0RMrSbm0QQS3peh-6jC1rGUzGkD5uTRKlUZ8zS3-14jxFkUpKRQ"/>
+<img alt="User 2" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface" data-alt="portrait of a female tech founder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdsKAlsSK03u4_LBhkKkFrkmCKP0PfcJh3cIAfJnPhFj1FiMZS2uLKeEK8Sm31_fDcGL6P41k1w09GBEua-TsoyBi1vZ3ycVhbGo0dPAdEj6Jbh67JNQopZ2bZT8RWmprts7Lv5yP7NaWqSWyx3BcQKw37Aml940ZD-I0vqwAqlbncPRdq1fg3_fMk88s5kPcVfjAciiJ-YX6LFS6bu6MB2Evyjn_f1faAd47O2iVU-HfO9fv9z_U3AnziF6MliRyVuwuIa9MZRLSo"/>
+<img alt="User 3" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface" data-alt="portrait of a male startup mentor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwUwE7xvK4nXz2p0nfchzU1S3TZPG-q0lpiBYTTi_cUjz-hcFx-uITURFBqqAVzIE1hJv3NbGGJxeEjeGr8LSAy2qAt-UDKjzwOiTX9w68WEpqZttaqXw5xwTxgZdcdRZXNrTIXp20FRi9gMHQ8XN1_rDWDN3LfbMToDu0rPmCGT6pm0GTRfEzAlfsQ-rg6QB84bdY1V1VXf6IYNol-DiaVJyW9N4twuuA9sY-jIcKGIsJXPvnPn8nABNRhp3Qk6W70_fxfK2DDnQq"/>
+<div class="inline-block h-10 w-10 rounded-full ring-2 ring-surface bg-surface-container-highest flex items-center justify-center text-xs font-bold text-on-surface">+12k</div>
+</div>
+</div>
+<!-- Small Feature Card 1 -->
+<div class="bg-surface-container-low p-8 rounded-[2rem] border border-outline-variant/10 hover:bg-surface-container transition-colors">
+<div class="w-14 h-14 bg-tertiary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="visibility_lock">visibility_lock</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-background mb-4">Private Lounges</h3>
+<p class="text-on-surface-variant leading-relaxed">Encrypted discussion spaces for sharing sensitive data and board decks away from the public noise.</p>
+</div>
+<!-- Small Feature Card 2 -->
+<div class="bg-surface-container-low p-8 rounded-[2rem] border border-outline-variant/10 hover:bg-surface-container transition-colors">
+<div class="w-14 h-14 bg-secondary-container rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-on-background mb-4">Lunar Insights</h3>
+<p class="text-on-surface-variant leading-relaxed">Weekly AI-synthesized reports on market trends, curated specifically for late-night reflection.</p>
+</div>
+<!-- Medium Feature Card -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary-container to-surface-container-low p-8 rounded-[2rem] border border-outline-variant/10 flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1">
+<h3 class="text-3xl font-headline font-bold text-on-background mb-4">Global Network</h3>
+<p class="text-on-primary-container text-lg">Access a diverse cohort of founders spanning 40+ countries, all building in the quiet hours across different timezones.</p>
+</div>
+<div class="flex-1 w-full h-48 bg-black/20 rounded-2xl overflow-hidden grayscale opacity-60">
+<img alt="Satellite view of earth at night" class="w-full h-full object-cover" data-alt="dramatic aerial view of earth at night showing city lights glowing like spiderwebs across continents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUBGojgRpA58h2o3n-ZHUn3UuRC7Mb9XL1YHHkUvQQZkpI8E6IYIP2W--jt2qqFXB3HqubJ9zBIGdctl3rS98OSh64GihrS1BpdfgnA7lvyB4HN5rkqEU6tc0dmrAaUXn12xXvtP-wMs5scxuhWFmqIejPE6fPKkCXb56WtxYzy5NlmunqsUUqQJeuD8ihS1ACKQbDn36tDjdK1iNmkQcSLs6CSvC0OKz9c_lOBROHt3M-sslhK5BnR5T1bLhzD-iCVeG2Pr6vlAnL"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Component: Moonlight Pulse Section -->
+<section class="mt-32 px-6">
+<div class="max-w-4xl mx-auto glass-panel p-12 rounded-[3rem] text-center border border-outline-variant/15 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] animate-pulse"></div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-6xl mb-6" data-icon="bedtime" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+<h2 class="text-4xl font-headline font-extrabold mb-6">Ready to find your sanctuary?</h2>
+<p class="text-on-surface-variant text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                    Join over 12,000 founders who have escaped the noise to build their legacies in the calm of the nocturnal board.
+                </p>
+<button class="px-12 py-5 rounded-full bg-secondary text-on-secondary font-headline font-extrabold text-xl shadow-[0_0_30px_rgba(251,131,0,0.3)] hover:scale-105 transition-transform">
+                    Apply for Membership
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-slate-950/90 backdrop-blur-2xl rounded-t-[2.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center bg-orange-400/10 text-orange-300 rounded-full px-5 py-2 ring-1 ring-orange-400/20 shadow-[0_0_15px_rgba(251,131,0,0.2)]">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-indigo-200 transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px]">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-indigo-200 transition-all">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px]">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-indigo-200 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-[11px]">Profile</span>
+</div>
+</footer>
+</body></html>

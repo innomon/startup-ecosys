@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OwlWise | Wisdom that Illuminates Growth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#450900",
+                        "inverse-on-surface": "#505466",
+                        "surface-container-low": "#0d1323",
+                        "background": "#090e1c",
+                        "on-secondary": "#574300",
+                        "tertiary-fixed-dim": "#929bfa",
+                        "on-tertiary-fixed": "#00055d",
+                        "surface-container-highest": "#1e253b",
+                        "error-container": "#b92902",
+                        "primary": "#fe9832",
+                        "primary-fixed": "#fe9832",
+                        "inverse-primary": "#904e00",
+                        "secondary-dim": "#ebbb00",
+                        "secondary-fixed": "#ffcb09",
+                        "primary-dim": "#ed8b24",
+                        "surface-container-lowest": "#000000",
+                        "surface-dim": "#090e1c",
+                        "on-primary-fixed-variant": "#592e00",
+                        "on-surface": "#e1e4fa",
+                        "outline-variant": "#434759",
+                        "on-tertiary": "#1b247f",
+                        "primary-fixed-dim": "#ed8b24",
+                        "on-error-container": "#ffd2c8",
+                        "tertiary-fixed": "#a2aaff",
+                        "surface-bright": "#242b43",
+                        "surface-container": "#13192b",
+                        "surface-container-high": "#181f33",
+                        "on-secondary-container": "#fff7ea",
+                        "surface-tint": "#fe9832",
+                        "on-tertiary-fixed-variant": "#252e88",
+                        "error-dim": "#d53d18",
+                        "secondary": "#fcc800",
+                        "outline": "#707588",
+                        "on-primary": "#4d2700",
+                        "inverse-surface": "#faf8ff",
+                        "surface-variant": "#1e253b",
+                        "on-secondary-fixed": "#423200",
+                        "primary-container": "#ea8822",
+                        "secondary-fixed-dim": "#efbe00",
+                        "tertiary-container": "#929bfa",
+                        "on-secondary-fixed-variant": "#644e00",
+                        "on-tertiary-container": "#0b1574",
+                        "on-primary-fixed": "#291200",
+                        "on-background": "#e1e4fa",
+                        "tertiary-dim": "#8d96f4",
+                        "on-surface-variant": "#a6aabf",
+                        "on-primary-container": "#391b00",
+                        "surface": "#090e1c",
+                        "tertiary": "#a2aaff",
+                        "error": "#ff7351",
+                        "secondary-container": "#745b00"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(30, 37, 59, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        /* Basic Dark/Light toggle visibility */
+        .dark-icon { display: none; }
+        .light-icon { display: block; }
+        .dark .dark-icon { display: block; }
+        .dark .light-icon { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="bg-[#090e1c]/60 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<img alt="OwlWise Logo" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-2xl font-black text-[#fe9832] tracking-tighter">OwlWise</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#fe9832] font-semibold text-sm hover:bg-[#fe9832]/10 transition-colors px-4 py-2 rounded-full" href="#">Home</a>
+<a class="text-[#a2aaff] font-semibold text-sm hover:bg-[#fe9832]/10 transition-colors px-4 py-2 rounded-full" href="#">Explore</a>
+<a class="text-[#a2aaff] font-semibold text-sm hover:bg-[#fe9832]/10 transition-colors px-4 py-2 rounded-full" href="#">Dashboard</a>
+<a class="text-[#a2aaff] font-semibold text-sm hover:bg-[#fe9832]/10 transition-colors px-4 py-2 rounded-full" href="#">Network</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-[#fe9832] p-2 hover:bg-[#fe9832]/10 transition-colors active:scale-95 duration-200 rounded-full" onclick="document.documentElement.classList.toggle('dark')" title="Toggle Light/Dark Mode">
+<span class="light-icon">light_mode</span>
+<span class="dark-icon">dark_mode</span>
+</button>
+<button class="material-symbols-outlined text-[#fe9832] p-2 hover:bg-[#fe9832]/10 transition-colors active:scale-95 duration-200 rounded-full" data-icon="notifications">notifications</button>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex flex-col items-center justify-center px-6 overflow-hidden">
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="relative z-10 max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 text-center md:text-left">
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full mb-6 border border-outline-variant/15">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-bold uppercase tracking-[0.05em] text-on-surface-variant">Welcome to the Parliament</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                        Wisdom that <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Illuminates Growth</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
+                        The ultimate nocturnal sanctuary for Bharat's brightest founders. Connect, build, and scale with the collective wisdom of India's startup ecosystem.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+<button class="w-full sm:w-auto px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 transition-all">
+                            Join the Parliament
+                        </button>
+<button class="w-full sm:w-auto px-8 py-4 border-2 border-primary/30 text-primary font-bold rounded-full hover:bg-primary/10 active:scale-95 transition-all">
+                            Explore Insights
+                        </button>
+</div>
+</div>
+<div class="order-1 md:order-2 flex justify-center relative">
+<div class="absolute inset-0 bg-secondary/10 blur-[80px] rounded-full"></div>
+<div class="relative z-10 w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
+<img alt="Friendly Owl Mascot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Ecosystem Perks - Bento Grid -->
+<section class="px-6 py-24 bg-surface-container-low/30">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-extrabold mb-4">Ecosystem Perks</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Exclusive tools and communities built specifically for the unique challenges of building in Bharat.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Perk 1: Wise Advisory -->
+<div class="md:col-span-7 bg-surface-container-highest rounded-lg p-8 relative overflow-hidden group hover:bg-surface-variant transition-colors">
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Wise Advisory</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-md">Get personalized mentorship from seasoned Bharat entrepreneurs who have scaled from 0 to 100.</p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="flex -space-x-3">
+<img alt="Mentor" class="w-10 h-10 rounded-full border-2 border-surface-container-highest" data-alt="Professional headshot of a smiling young Indian entrepreneur in a modern office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyyOVOqRuMnI_wkH5UyLI3IDTx9JFYJICgC8N9Z57wO4QkXL8Qg3mj7d7UuPfbCRK6n6VIv_oxPUj0WcqRSqHeElMHmK6490OcNaDTh4m3IPxr_A6GCnNnzAtozNOwsKdnvViTXuuGeRCMO74PyOV6goNuxtOmYE6rp_NQonGm_f_E3hAPFNTkb_UKAon9Z0lJqb90zVrKjfsPvGAWNXuugsk8gcv9RBZMhAZIZXIYMrKPJlMMqKZlHfGJ2MihqNKhE-GKsh5UN1sy"/>
+<img alt="Mentor" class="w-10 h-10 rounded-full border-2 border-surface-container-highest" data-alt="Portrait of a successful Indian businesswoman with a confident smile and professional attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ0TtvWQ1Y3yzYZ0qAMDk8-icOgRandKW_PQ4ZMjZ7RNabIppPeIx2foPe9IFj1kl6Fvna0WbdzcP2PfT3cyIpR06-JayU1dqVx0uWsQI7H0QrqU4ZM57am6OyouBVjpoB9zMO2M15gAWeMI_Sya4UDg3OzTDgIO9sg4PfKMX9vOaFWI9xUICD0-cmIXMDdOzXwlOMUrsmBFDFS6aRT7pBcoQqYtoC_wLuNyLnDguH0FRuAaovx7UI3SmY9fjnpjhWTtBsaNl0WExb"/>
+<img alt="Mentor" class="w-10 h-10 rounded-full border-2 border-surface-container-highest" data-alt="Close-up of a distinguished Indian tech leader with salt-and-pepper hair and a warm expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQNk1Ttzdm23rgSFnJokS0R0lo8EQ9jFp5yaM5OijdMA93cUBuqw0XKHOxXm64_bbkFzUmAha8GeXqODcZmzKK_2nZtIwU40nS_-3m8hALsXb61rSlD-a7M7OTMi3hlgsFVnzphj0v6yV1sWeRI_V4Wwc-ML5G0XVZoHTRT41kgnK3OnMZ6MfvgAIuA6bks7PqCXlJBgBxAH4x6Dw7u7dvck1dRIwrvp7nrXUSSBZEd-tBWBX43BLvrFUNfvVQp-WAAmAi5D1vcUHx"/>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">+42 Mentors Active</span>
+</div>
+</div>
+</div>
+<!-- Perk 2: IndiCloud Lounges -->
+<div class="md:col-span-5 bg-gradient-to-br from-surface-container-highest to-[#1a1f2e] rounded-lg p-8 relative group overflow-hidden">
+<div class="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="meeting_room">meeting_room</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">IndiCloud Lounges</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Access premium co-working spaces and exclusive lounges across 12 major Indian cities.</p>
+<div class="rounded-lg overflow-hidden h-32 bg-surface-container">
+<img alt="Lounge Space" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Modern coworking space with warm lighting, industrial design elements, and comfortable seating in a tech startup hub." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhIvv_i__bbLNkSyj6d-zP_wiDTlKpH3DsDwp5HSyCZ_8HBs5kSYf17IysCzSehFavfTOHouwSLonzriz4kuVBlNn4wwYi6YyuEeBxg8B5nxv6VquTji1jjAbFOuAd3vnOe_j2ga6nJdfEF31PqQYnjqFEq43tEbSz_7sD8YVKDwB7VymaSI4p74nH-g6kkmFEiLEJ2pa5LWh62QU0YJA_lQ6IG4TdrIHQxoA0S-jcY1OQgL7QLjyR0YiWoShsTzAGQp-GtUKhiIge"/>
+</div>
+</div>
+<!-- Perk 3: Pan-India Network -->
+<div class="md:col-span-12 bg-surface-container-highest rounded-lg p-8 flex flex-col md:flex-row items-center gap-8 border border-outline-variant/10">
+<div class="md:w-1/2">
+<div class="w-14 h-14 bg-tertiary/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="hub">hub</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">Pan-India Network</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-6">Tap into a massive decentralized network of 5,000+ founders, investors, and operators from Tier 1 to Tier 3 cities.</p>
+<button class="bg-surface-container-high px-6 py-3 rounded-full text-on-surface font-bold flex items-center gap-2 hover:bg-surface-bright transition-colors">
+                                Browse Directory
+                                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="md:w-1/2 w-full grid grid-cols-3 gap-3">
+<div class="bg-surface-container rounded-lg p-4 text-center">
+<div class="text-primary text-2xl font-black mb-1">5K+</div>
+<div class="text-[10px] uppercase font-bold tracking-tighter opacity-60">Founders</div>
+</div>
+<div class="bg-surface-container rounded-lg p-4 text-center">
+<div class="text-secondary text-2xl font-black mb-1">12</div>
+<div class="text-[10px] uppercase font-bold tracking-tighter opacity-60">Cities</div>
+</div>
+<div class="bg-surface-container rounded-lg p-4 text-center">
+<div class="text-tertiary text-2xl font-black mb-1">₹50Cr</div>
+<div class="text-[10px] uppercase font-bold tracking-tighter opacity-60">Deployable</div>
+</div>
+<div class="col-span-3 h-24 rounded-lg overflow-hidden bg-surface-container flex items-center justify-center">
+<span class="text-on-surface-variant/20 font-black text-4xl italic tracking-[1em] select-none">MAP OF INDIA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Insights Preview Section -->
+<section class="px-6 py-24">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="text-3xl md:text-5xl font-extrabold mb-4">Fresh Wisdom</h2>
+<p class="text-on-surface-variant max-w-md">Curated insights specifically for the Indian market dynamics.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform">
+                    View All Insights
+                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Insight Card 1 -->
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[16/10] rounded-lg overflow-hidden relative">
+<img alt="Startup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A stylized image of a bustling Indian market transition into a modern digital interface with glowing golden threads." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnZehYNvIrqgEbJAmV7jF_iuCRWCIOoT3hZaln_QLOvCFdz47rp6_unBgaUzdsUfA0Sq0R0E0TU32zWzXvSgkl2gvsKjMRBaxG8LXHfDJmHE0jsD1sU_mgTS9bgd9Ai99zjZHwF9lXEjcb_px72x_Py5iXRFFFUTS_ntu_YRmHictpnqNZk3Pjwdn2ds4tF8PAsoH8Y4izYTEJTorVhpE_eXu7ltIzDDO_v20bYukYOkZpZbpMduJCW4vv1oR-B2eaAA5qNj6dyPxT"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Strategy</div>
+</div>
+<h4 class="text-xl font-bold group-hover:text-primary transition-colors">Decoding Bharat: Marketing in Tier-2 Cities</h4>
+<p class="text-sm text-on-surface-variant line-clamp-2">How to adapt your digital product for the next 200 million users who speak localized languages...</p>
+<div class="flex items-center gap-2 mt-2">
+<img alt="Author" class="w-6 h-6 rounded-full" data-alt="Avatar of an Indian technology blogger." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutlA-f-OCgF2cDU9uKIVa0b53boX_lWmhSkzm1-qK4Dfi2y3XYyR-166mZJ58BkwGzrigHU8GQd3DFlQPikOamKgrUbKR2sAsACw0wAP1O3cGmvIJbwVvcHyFblHg3HgvkUI5TBfWWHRuZc_pB4zbkSEE0btJXT69QexkbsNvizBYRHlwYwG_QpvzAa--121CC9UUr9hNrgKteKyTmzpWs4UNxNScKkJYRvQ9EERXHTIMcZQ_9gs565_vvjgiTuxG7SmRKLkobCvM"/>
+<span class="text-xs font-semibold text-on-surface-variant">Arjun V. • 5 min read</span>
+</div>
+</div>
+<!-- Insight Card 2 -->
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[16/10] rounded-lg overflow-hidden relative">
+<img alt="Finance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract visualization of financial growth with saffron and indigo color nodes connecting in a neural network pattern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvcNngqSDDsnn65M_aX85rfNetfG2J5Cp7cBFcf7qcnL887S95xx4qHGVvv_seBwnp09eXDpouOmRFQrb1gTXoSYCBXbjwd_N2K2u18LYE0EsgxMNXWOz9cjCvi7jm4MQWx1-rqq7xtJ_46bp0gj2BxGumxt9yxHqpmPlBKeQbHgBC99xXTywTwn2kGH41eb6rWdIQCSCzSrXz8dTpQNExojwFMxl20D-n-q5IQ43c9XJ-qdCblQ-uVUIoAQDaZVYJc79DzmjRvPgu"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">FinTech</div>
+</div>
+<h4 class="text-xl font-bold group-hover:text-primary transition-colors">The UPI Revolution: What's Next for 2025?</h4>
+<p class="text-sm text-on-surface-variant line-clamp-2">Analyzing the shift from simple payments to credit on UPI and how founders can capitalize on the new rail...</p>
+<div class="flex items-center gap-2 mt-2">
+<img alt="Author" class="w-6 h-6 rounded-full" data-alt="Avatar of an expert in Indian financial technologies." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHTiAJwC1bWmgg9wjkGB-fUO4NyaBasvZ4A046MeF41DKJCraucsR2PVYGAcx3Kua3IYRjBq4sChihjPwhKNXyNKpjtW_ROtDtRPX-wNt8z7kl-Je4LTcd2hhJq1CvMBacfxO8B0-dRUvT3WOeAihQiB-EtUps9KoYKUObDXU6YqfVoW-5dGoX_TFLrqlXPQ82bgAYg2ICzs1aEvYCa54jeNoHGXSOxR2inhx_nL-jVMJpJTrlRL8zCzEMfn3cNXxi0My8solGZ_Y"/>
+<span class="text-xs font-semibold text-on-surface-variant">Priya K. • 8 min read</span>
+</div>
+</div>
+<!-- Insight Card 3 -->
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[16/10] rounded-lg overflow-hidden relative">
+<img alt="AI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of a circuit board glowing with golden light against a dark blue background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAZnfGEgno9XBgRBojtDM4e7y7xUc9EQ-s1nwcd-Qe35Vu30-FFYPLBwf81DTjKauT7yCB481NC_edKLY_omQHhcclNpFe1OAhQCZX6Rb07BH0B--l-Eu2QRjZRUl6b_fWhVrqfxS-kJO2X8Y1MDM6Q6rSgBFbN1VydBK-gghYAA6iNnHckiyMkamwulTNebXTInfW131FXkJ94WEBoQUPqkPj7cfx-dhWLy7J3H7FjCfuMbRQnbtnCotYp5BpvUcajq7f4_ndd8NQ"/>
+<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tech</div>
+</div>
+<h4 class="text-xl font-bold group-hover:text-primary transition-colors">GenAI for the Indian SMB Ecosystem</h4>
+<p class="text-sm text-on-surface-variant line-clamp-2">Case studies of vernacular AI agents helping Kirana stores manage their inventory and credit lines...</p>
+<div class="flex items-center gap-2 mt-2">
+<img alt="Author" class="w-6 h-6 rounded-full" data-alt="Avatar of an AI researcher specializing in Indian languages." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA71ivWd2uxupBX2KUVFE87fabWeEK4KxcDOvM7C01TC87-Nzx40KNW5VECh-SbgJIIbY84BRRn6FAJszcbQHEHGp7AYXlJ40VDgk_Ln-psE-XRFQaXQw9AjkHkqaZGNVy2e6zQsdkFkBrL7emnbcQrXo2SMqCB0_LgTU3eAYijHyKJpl_dbKczvQJYY95qv5cshTQRstlB87IlICs4LFYaIJrJqW7u_n0fXbzY1JjSf2du1zuOglZGngr0UUuAqeXqHYwpGcUzxlyk"/>
+<span class="text-xs font-semibold text-on-surface-variant">Siddharth M. • 12 min read</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="px-6 py-24 mb-16">
+<div class="max-w-4xl mx-auto glass-card rounded-lg p-12 text-center relative overflow-hidden border border-outline-variant/10">
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" data-icon="auto_awesome">auto_awesome</span>
+<h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Don't miss the next <br/>Midnight Wisdom Session.</h2>
+<p class="text-on-surface-variant text-lg mb-10 max-w-lg mx-auto">Subscribe to our weekly newsletter for deep-dives into the Bharat economy and ecosystem updates.</p>
+<div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 bg-surface-container-lowest border-0 rounded-full px-6 py-4 focus:ring-2 focus:ring-primary text-on-surface" placeholder="Your work email" type="email"/>
+<button class="bg-primary text-on-primary font-bold px-8 py-4 rounded-full hover:scale-105 active:scale-95 transition-all">
+                            Notify Me
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-[#090e1c]/60 backdrop-blur-xl fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 rounded-t-[40px] z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.3)]">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#fe9832] to-[#ea8822] text-[#090e1c] rounded-full px-5 py-2 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a2aaff] px-5 py-2 hover:text-[#fcc800] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.05em]">Network</span>
+</a>
+</nav>
+<!-- Footer (Desktop) -->
+<footer class="hidden md:block bg-surface-container-low py-12 px-6">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<img alt="OwlWise Logo" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uinSCvQoGZ5tcjBvqJ0dOOOfH3HKGNuaoOtytRbZVDrk46ktt6ULXDQC-GyLFqZihfISiohDDcyN3CWpajAOGl3sUUhIyb_ya9tMhAmyw70ddBWH574er-0UTyTOn66jJ0Ja5j0Mq8ApSAAF08iqCOzsAc-YOSvZIuRcG4m2bCI4iz983CsHQcUxqAuzz-GTvvawy1mRUnarDeE77JODVW_ZAXZSPo2CHcuzGchjZ0A8oJQDHUA3bl0ocUk0rnXNUkAnYxnS1oXGg"/>
+<span class="font-bold text-2xl text-primary tracking-tighter">OwlWise</span>
+</div>
+<div class="flex gap-12 text-sm text-on-surface-variant font-semibold">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Founder Handbook</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="language">language</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center text-xs text-on-surface-variant/40">
+            © 2024 OwlWise Startup Ecosystem. Made for Bharat Founders.
+        </div>
+</footer>
+</body></html>

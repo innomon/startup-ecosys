@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Startup Board | Founder Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#c5c6d1",
+              "surface-container": "#1f2020",
+              "primary-fixed-dim": "#b5c4ff",
+              "secondary-container": "#fb8300",
+              "on-primary-fixed": "#00164d",
+              "on-tertiary-container": "#a4c6a2",
+              "inverse-on-surface": "#303030",
+              "surface-container-highest": "#353535",
+              "inverse-primary": "#495c98",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-fixed-variant": "#304d32",
+              "on-tertiary": "#1a361d",
+              "inverse-surface": "#e4e2e1",
+              "error": "#ffb4ab",
+              "tertiary-container": "#365337",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#04210a",
+              "surface-bright": "#393939",
+              "on-primary-fixed-variant": "#30447e",
+              "primary": "#b5c4ff",
+              "outline-variant": "#454650",
+              "background": "#131313",
+              "secondary-fixed-dim": "#ffb783",
+              "on-primary-container": "#a8bafd",
+              "tertiary": "#aecfab",
+              "surface-container-low": "#1b1c1c",
+              "on-primary": "#172c66",
+              "on-secondary": "#4f2500",
+              "primary-container": "#364984",
+              "outline": "#8f909b",
+              "secondary-fixed": "#ffdcc5",
+              "primary-fixed": "#dbe1ff",
+              "on-background": "#e4e2e1",
+              "on-error": "#690005",
+              "on-secondary-fixed": "#301400",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed": "#c9ecc6",
+              "tertiary-fixed-dim": "#aecfab",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary": "#ffb783",
+              "surface-dim": "#131313",
+              "on-surface": "#e4e2e1",
+              "surface-tint": "#b5c4ff",
+              "error-container": "#93000a",
+              "surface-variant": "#353535",
+              "on-secondary-container": "#5c2c00",
+              "on-secondary-fixed-variant": "#703700"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(31, 32, 32, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .moonlight-glow {
+            box-shadow: 0 0 40px -10px rgba(251, 131, 0, 0.15);
+        }
+        body {
+            background-color: #131313;
+            color: #e4e2e1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-xl shadow-[0_10px_40px_rgba(54,73,132,0.15)] flex items-center justify-between px-6 py-4 w-full">
+<div class="text-orange-200 dark:text-orange-300 font-extrabold flex items-center gap-2 font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg">
+<span class="material-symbols-outlined text-2xl">owl</span>
+<span>The Startup Board</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-400 hover:bg-indigo-900/20 hover:text-orange-100 transition-colors px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-slate-400 hover:bg-indigo-900/20 hover:text-orange-100 transition-colors px-3 py-1 rounded-lg" href="#">Explore</a>
+<a class="text-orange-200 font-bold" href="#">Dashboard</a>
+<a class="text-slate-400 hover:bg-indigo-900/20 hover:text-orange-100 transition-colors px-3 py-1 rounded-lg" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-secondary transition-colors">notifications</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a startup founder with a thoughtful expression and soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpxSMOr3MN8dWh1Mb4y5tiJ7Q2NRkJRIrW4g3Bq5DbiOfHiTw9oe2mVB96_2bJbGLCSVEPNDelvt9BPuZ-23OMH1Lwc4tS30FPFDE9FQazcxCoH4DjRRrY-yBMLDXm_mKoNBcJVFKV0vTsgarmgz4F-6CCdEfmXQORMvKxUZPhiWzyXoaWozUuOJIggwtYjRrM4G9F_wGVEt7Tux4o3SR2aZypO1SerQqI8qe2NE3T8fDq0r1lTqiI2chxrjWoWF3Gz4v8Ct2zamXg"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-12">
+<!-- Welcome Hero Section (Asymmetric Editorial Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8 space-y-4">
+<span class="text-secondary font-headline font-semibold tracking-widest uppercase text-xs">The Sanctuary</span>
+<h1 class="text-4xl md:text-6xl font-headline font-extrabold leading-tight text-on-background">
+                    Welcome back, <br/><span class="text-primary-fixed-dim">Arthur Vance.</span>
+</h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                    The nocturnal hours are when the best ideas take flight. Your startup ecosystem is quiet, thriving, and ready for your next move.
+                </p>
+</div>
+<div class="lg:col-span-4 flex justify-end">
+<div class="bg-surface-container-high p-8 rounded-[2rem] w-full relative overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 rounded-full blur-3xl group-hover:bg-secondary/20 transition-all duration-700"></div>
+<p class="text-sm text-on-tertiary-container font-medium mb-2">Wise Insight</p>
+<p class="italic text-on-surface leading-relaxed">"The moon does not fight the sun to shine; it simply waits for the darkness to reveal its brilliance."</p>
+</div>
+</div>
+</section>
+<!-- Metrics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low p-6 rounded-[2rem] flex flex-col justify-between h-48 group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-primary-container/30 rounded-xl text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<span class="text-tertiary text-xs font-bold">+12%</span>
+</div>
+<div>
+<h3 class="text-on-surface-variant text-sm font-medium">Total Connections</h3>
+<p class="text-3xl font-headline font-bold text-on-background">1,284</p>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low p-6 rounded-[2rem] flex flex-col justify-between h-48 group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-secondary-container/10 rounded-xl text-secondary">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-secondary text-xs font-bold">8 New</span>
+</div>
+<div>
+<h3 class="text-on-surface-variant text-sm font-medium">Pending Applications</h3>
+<p class="text-3xl font-headline font-bold text-on-background">42</p>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low p-6 rounded-[2rem] flex flex-col justify-between h-48 group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-tertiary-container/30 rounded-xl text-tertiary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<span class="text-tertiary text-xs font-bold">Steady</span>
+</div>
+<div>
+<h3 class="text-on-surface-variant text-sm font-medium">Profile Views</h3>
+<p class="text-3xl font-headline font-bold text-on-background">3.4k</p>
+</div>
+</div>
+<!-- Metric 4: Moonlight Pulse Card -->
+<div class="bg-primary-container p-6 rounded-[2rem] flex flex-col justify-between h-48 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex justify-between items-start relative z-10">
+<div class="p-3 bg-white/10 rounded-xl text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="relative z-10">
+<h3 class="text-white/70 text-sm font-medium">Board Reputation</h3>
+<p class="text-3xl font-headline font-bold text-white">Top 5%</p>
+</div>
+</div>
+</section>
+<!-- Main Content: Feed & Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Quick Actions (Left Sticky/Focus) -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="space-y-6">
+<h2 class="text-2xl font-headline font-bold text-on-background">Founder Toolkit</h2>
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-highest rounded-2xl group hover:bg-secondary-container transition-all duration-300">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary-container">rocket_launch</span>
+<span class="font-bold group-hover:text-on-secondary-container">Post a Startup</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-secondary-container">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-low border border-outline-variant/15 rounded-2xl group hover:border-primary transition-all duration-300">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">search</span>
+<span class="font-bold">Explore Founders</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-low border border-outline-variant/15 rounded-2xl group hover:border-tertiary transition-all duration-300">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">edit_note</span>
+<span class="font-bold">Update Roadmap</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+<!-- Featured Card with Glassmorphism -->
+<div class="glass-panel p-8 rounded-[2.5rem] space-y-4 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/20 blur-3xl rounded-full"></div>
+<h3 class="text-xl font-headline font-bold text-primary">Monthly Huddle</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Join 15 other founders tonight for a private strategy session on Scaling in Dark Markets.</p>
+<div class="flex -space-x-3 pt-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface" data-alt="avatar of a male entrepreneur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlGM6cvDmKrWlHVOY9BJvUouB29_NamESE7SJ7Wwbj3ldnl_vUXlYU1BXBMVEFhu3pq4pQB4Jfth4o68hnSeysxG5JS0KaI2PpcpkRBJRfHMWm-kZbNR3IGHKvk5VBwGCGqxAFl1epzli6tgsUfxkgJwuFhTuerVpqXgzfsL3fWdHdQt6ZuTmuE1I_vuB4FaiBEQFWHtpDAdgavaiuUhxZiIAGDwdoILK4Rcq_ehFhfbBh8bZQyRzcP-Iv5L6oLhTbPdbfIt_h6AeZ"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface" data-alt="avatar of a female tech founder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDApuuvN0S8qnUTfZ0qI65f-aqN-tAJUC-LuHQswkKd3okQXyjySJtoBuUkIAMnZEUUv1BXr-hOM2dOlAmQHwfq-5WFK1E07c62bbJEhNwXjHjmL4Dqrq4vnEv08WYoAe88c4ANelIe4G77qOiwsT2J-vq4KBGuwa_qH-da0FuQWUNRV1fvbbGvMqXcPOfuugqp6aVxB33T6EcCfloEQuSjSfGhNnvB0fT4ybJ_DLxXIKz8LAXcVqbnqneq12dHNF5X-IbGh7aPwSwL"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface" data-alt="avatar of a professional developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGVLC78E98WFKuH5a_9drl4SQrxJ71vt9PQAw3FdPx-CUI-2SBjBsjUffvEWQLcHYVClNgzd_CeRiGgcH_EXvaNocXGcmaSOXP4IqeyMGnL8wtQ6jR2awi0M5FBc64mLghpc48Dg7F55oNvxUKA-lQEa4_UMiTf7LjYduGNn62wV_7T09u2DsrOcmP8aZpgcD29RSjruQI2F7ERCzYVxjalfOQbYV_1fQ_af30gv7QpNeZmgh3-awQrngJSQ8mxIy5YNzTL9iVLRR"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+</div>
+</aside>
+<!-- Recent Activity Feed -->
+<section class="lg:col-span-8 space-y-8">
+<div class="flex justify-between items-center">
+<h2 class="text-2xl font-headline font-bold text-on-background">Recent Activity</h2>
+<button class="text-secondary text-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="space-y-4">
+<!-- Activity Item 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl flex gap-6 items-start group hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+</div>
+<div class="space-y-1">
+<p class="text-on-surface"><span class="font-bold">Project Nebula</span> was successfully verified by the moderation board.</p>
+<p class="text-xs text-on-surface-variant">2 hours ago • Ecosystem News</p>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl flex gap-6 items-start group hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">handshake</span>
+</div>
+<div class="space-y-1">
+<p class="text-on-surface"><span class="font-bold">Elena Solas</span> requested a connection to discuss 'Fintech Synergies'.</p>
+<div class="flex gap-2 mt-4">
+<button class="px-4 py-2 bg-secondary text-on-secondary text-xs font-bold rounded-full">Accept</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface text-xs font-bold rounded-full">Ignore</button>
+</div>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl flex gap-6 items-start group hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">campaign</span>
+</div>
+<div class="space-y-1">
+<p class="text-on-surface">New <span class="font-bold">Investment Opportunity</span> matched your founder profile in the AI sector.</p>
+<p class="text-xs text-on-surface-variant">Yesterday • Marketplace</p>
+</div>
+</div>
+<!-- Activity Item 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl flex gap-6 items-start group hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-12 h-12 rounded-2xl bg-on-surface-variant/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">monitoring</span>
+</div>
+<div class="space-y-1">
+<p class="text-on-surface">Your weekly <span class="font-bold">Engagement Report</span> is ready for review.</p>
+<p class="text-xs text-on-surface-variant">2 days ago • Insights</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-slate-950/90 backdrop-blur-2xl rounded-t-[2.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.5)] md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 font-['Plus_Jakarta_Sans'] font-semibold text-[11px] hover:text-indigo-200 transition-all">
+<span class="material-symbols-outlined mb-1">home</span>
+<span>Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 font-['Plus_Jakarta_Sans'] font-semibold text-[11px] hover:text-indigo-200 transition-all">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span>Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-orange-400/10 text-orange-300 rounded-full px-5 py-2 ring-1 ring-orange-400/20 shadow-[0_0_15px_rgba(251,131,0,0.2)] font-['Plus_Jakarta_Sans'] font-semibold text-[11px] scale-110">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 font-['Plus_Jakarta_Sans'] font-semibold text-[11px] hover:text-indigo-200 transition-all">
+<span class="material-symbols-outlined mb-1">person</span>
+<span>Profile</span>
+</div>
+</nav>
+</body></html>

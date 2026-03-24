@@ -1,0 +1,57 @@
+{
+  "Name": "StartupVenture",
+  "DisplayName": "Startup Venture",
+  "TableName": "startup_venture",
+  "LabelAttributeName": "name",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "name",
+      "Header": "Venture Name",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "founder_id",
+      "Header": "Founder",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "stage",
+      "Header": "Stage",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "sector",
+      "Header": "Sector",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "description",
+      "Header": "Description",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "pitch_deck_url",
+      "Header": "Pitch Deck URL",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    }
+  ]
+}

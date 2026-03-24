@@ -1,0 +1,50 @@
+{
+  "Name": "ConnectionRequest",
+  "DisplayName": "Connection Request",
+  "TableName": "connection_request",
+  "LabelAttributeName": "status",
+  "PrimaryKey": "id",
+  "Attributes": [
+    {
+      "Field": "sender_id",
+      "Header": "Sender ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "receiver_id",
+      "Header": "Receiver ID",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true
+    },
+    {
+      "Field": "status",
+      "Header": "Status",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": true,
+      "InDetail": true,
+      "Options": "Pending, Accepted, Declined"
+    },
+    {
+      "Field": "message",
+      "Header": "Message",
+      "DataType": "String",
+      "DisplayType": "Text",
+      "InList": false,
+      "InDetail": true
+    },
+    {
+      "Field": "created_at",
+      "Header": "Created At",
+      "DataType": "Datetime",
+      "DisplayType": "Date",
+      "InList": true,
+      "InDetail": true
+    }
+  ]
+}
